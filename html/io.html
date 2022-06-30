@@ -64,7 +64,7 @@
 			y=0;
 			x=0;
 			var classes = [];
-			var cw = ppp*6;
+			var cw = ppp*3;
 			var ch = ppp;
 			if(x <= 0 || x >= screenW - 1)
 						cw -= border;
@@ -72,7 +72,7 @@
 						ch -= border;
 			classes.push("border_left");
 			var line = "<tr>";
-			line += "<td class=\"" + classes.join(" ") + "\" style=\"width: " + cw + "px; height: " + ch + "px;\">" + value + "</td>";
+			line += "<td colspan='2' class=\"" + classes.join(" ") + "\" style=\"width: " + cw + "px; height: " + ch + "px;\">" + value + "</td>";
 			line += "</tr>";
 			$("#content").append(line);
 			/*end*/	
