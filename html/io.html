@@ -138,10 +138,10 @@
 			else if(value <= 0 && elem.hasClass("redstone_on")){
 				elem.removeClass("redstone_on");
 				count_quiz++;
-				if(count_quiz<11){
-					document.getElementById("content").innerHTML="";
+				document.getElementById("content").innerHTML="";
+				if(count_quiz<10){
 					generateTable(count_quiz);
-				}else window.location.href = "https://www.its-ictpiemonte.it/corsi/fintech-software-developer/";
+				}else window.location.href = "https://www.its-ictpiemonte.it/corsi/digital-strategist/";
 				
 			}
 			document.getElementById("console").innerHTML=x+" "+y;
