@@ -53,8 +53,9 @@
 		var screenH = 1;
 		var screenData = [ 0 ];
 		var hasRedOutput = false;
+		let count_quiz=0
 		
-		function generateTable() {
+		function generateTable(value) {
 			var ppp = $(window).width() / (screenW - 0.25);
 			var border = Math.floor(ppp * 0.125);
 			ppp = Math.floor(ppp);
@@ -65,7 +66,6 @@
 					var classes = [];
 					var cw = ppp*3;
 					var ch = ppp;
-					var value = 0;
 					
 					if(x > 0)
 						classes.push("border_left");
@@ -79,8 +79,8 @@
 					if(y <= 0 || y >= screenH - 1)
 						ch -= border;
 						
-					if(value > 0)
-						classes.push("redstone_on");
+					//if(value > 0)
+						//classes.push("redstone_on");
 					
 						// identidico le 6 celle
 					xx=x
@@ -114,6 +114,8 @@
 			else if(value <= 0 && elem.hasClass("redstone_on"))
 				elem.removeClass("redstone_on");
 		
+			count_quiz++;
+			generateTable(count_quiz);
 			document.getElementById("console").innerHTML=x+" "+y;
 		}
 		
@@ -129,7 +131,7 @@
 
                 wdGetRedstoneArray(function(array) {
                     screenData = array;
-                    generateTable();
+                    generateTable(count_quiz);
 
                     wdGetUpgrades(function(upgrades) {
                         for(i = 0; i < upgrades.length; i++) {
