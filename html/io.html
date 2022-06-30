@@ -84,15 +84,15 @@
 						// identidico le 6 celle
 					if(y==2 && x==0)
 						x=1;
-
-					if(y==0 && x==1)
-						x=5;
-					
-					if(y==1 && x==1 )
-						x=5;
-					
-					if(y==2 && x==1 )
-						x=4;
+					else
+						if(y==0 && x==1)
+							x=5;					
+						else 
+							if(y==1 && x==1 )
+								x=5;			
+							else 
+								if(y==2 && x==1 )
+									x=4;
 
 					
 					line += "<td id=\"cell_" + x + "_" + y + "\" class=\"" + classes.join(" ") + "\" style=\"width: " + cw + "px; height: " + ch + "px;\" onclick=\"wdToggle(" + x + ", " + y + ")\">" + value + "</td>";
