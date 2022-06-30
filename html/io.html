@@ -60,12 +60,19 @@
 			var border = Math.floor(ppp * 0.125);
 			ppp = Math.floor(ppp);
 		
+			/*title*/
+			var classes = [];
+			classes.push("border_left");
+			var line = "<tr>";
+			line += "<td id=\"cell_" + xx + "_" + y + "\" class=\"" + classes.join(" ") + "\" style=\"width: " + cw + "px; height: " + ch + "px;\" onclick=\"wdToggle(" + xx + ", " + y + ")\">" + value + "</td>";
+			line += "</tr>";
+			$("#content").append(line);	
+			/*
 			for(y = 0; y < screenH; y++) {
 				var line = "<tr>";
 				for(x = 0; x < screenW/3; x++) {
 					var classes = [];
-					if(y==0) var cw = ppp*6;
-					else var cw = ppp*3;
+					var cw = ppp*3;
 					var ch = ppp;	
 
 					if(x > 0)
@@ -102,6 +109,7 @@
 				line += "</tr>";
 				$("#content").append(line);
 			}
+			*/
 		}
 		
 		/* This function has to be named that way */
