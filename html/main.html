@@ -60,12 +60,23 @@
 			padding-left: 20px;
 		}
 	</style>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="wdlib.js"></script>
+	<script type="text/javascript">
+
+		function webdisplaysRedstoneCallback(x, y, value) {
+			y = screenH - y - 1; //Flip Y axis
+			
+			document.getElementById("console").innerHTML=x+" "+y;
+		}
+	</script>
 </head>
 <body>
 	<table id="centercube">
 		<tr>
 			<td id="threedee">
 				<div id="cube">
+					<div id="console"></div>
 					<div id="front"></div>
 					<div id="back"></div>
 					<div id="left"></div>
