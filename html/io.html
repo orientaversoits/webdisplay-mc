@@ -114,6 +114,7 @@
 			else if(value <= 0 && elem.hasClass("redstone_on")){
 				elem.removeClass("redstone_on");
 				count_quiz++;
+				document.getElementById("content").innerHTML="";
 				if(count_quiz<11){
 					document.getElementById("content").innerHTML="";
 					generateTable(count_quiz);
