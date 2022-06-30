@@ -53,7 +53,7 @@
 		var screenH = 1;
 		var screenData = [ 0 ];
 		var hasRedOutput = false;
-		let count_quiz=1;
+		let count_quiz=0;
 		
 		function generateTable(value) {
 			var ppp = $(window).width() / (screenW - 0.25);
@@ -107,16 +107,20 @@
 			y = screenH - y - 1; //Flip Y axis
 			var elem = $("#cell_" + x + "_" + y);
 			
-			elem.html("" + value);
+			elem.html("SELEZIONATO");
 			
 			if(value > 0 && !elem.hasClass("redstone_on"))
 				elem.addClass("redstone_on");
-			else if(value <= 0 && elem.hasClass("redstone_on"))
+			else if(value <= 0 && elem.hasClass("redstone_on")){
 				elem.removeClass("redstone_on");
+				count_quiz++;
+				document.getElementById("content").innerHTML="";
+				generateTable(count_quiz);
+			}
+				
+				
 			
-			count_quiz++;
-			document.getElementById("content").innerHTML="";
-			generateTable(count_quiz);
+			
 			document.getElementById("console").innerHTML=x+" "+y;
 		}
 		
