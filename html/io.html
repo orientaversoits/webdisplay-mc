@@ -82,17 +82,19 @@
 						classes.push("redstone_on");
 					
 						// identidico le 6 celle
+					xx=x
+
 					if(y==2 && x==0)
-						x=1;
-					else if(y==0 && x==1)
-							x=5;					
-						else if(y==1 && x==1 )
-								x=5;			
-							else if(y==2 && x==1 )
-									x=4;
+						xx=1;
+					if(y==0 && x==1)
+						xx=5;					
+					if(y==1 && x==1 )
+						xx=5;			
+					if(y==2 && x==1 )
+						xx=4;
 
 					
-					line += "<td id=\"cell_" + x + "_" + y + "\" class=\"" + classes.join(" ") + "\" style=\"width: " + cw + "px; height: " + ch + "px;\" onclick=\"wdToggle(" + x + ", " + y + ")\">" + value + "</td>";
+					line += "<td id=\"cell_" + xx + "_" + y + "\" class=\"" + classes.join(" ") + "\" style=\"width: " + cw + "px; height: " + ch + "px;\" onclick=\"wdToggle(" + xx + ", " + y + ")\">" + value + "</td>";
 				}					
 				line += "</tr>";
 				$("#content").append(line);
