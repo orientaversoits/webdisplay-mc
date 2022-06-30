@@ -7,6 +7,7 @@
 			margin: 0;
 			padding: 0;
 			overflow: hidden;
+			font-family: sans-serif;
 		}
 		
 		#content {
@@ -44,6 +45,7 @@
 		.redstone_override {
 			background-color: rgb(0, 100, 255) !important;
 		}
+		
 	</style>
 	<script type="text/javascript" src="jquery.js"></script>
 	<script type="text/javascript" src="wdlib.js"></script>
@@ -72,7 +74,7 @@
 						ch -= border;
 			classes.push("border_left");
 			var line = "<tr>";
-			line += "<td colspan='2' class=\"" + classes.join(" ") + "\" style=\"width: " + cw + "px; height: " + ch + "px; color: green;\" >" + obj_quiz[count_quiz][0] + "</td>";
+			line += "<td colspan='2' class=\"" + classes.join(" ") + "\" style=\"width: " + cw + "px; height: " + ch + "px; color: orange;\" >" + obj_quiz[count_quiz][0] + "</td>";
 			line += "</tr>";
 			$("#content").append(line);
 			/*end*/	
