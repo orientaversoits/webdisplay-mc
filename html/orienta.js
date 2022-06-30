@@ -15,10 +15,10 @@ let obj_quiz=[
     ],
     [        
         "Per cosa usi maggiormente i social?",
-        ["Sì, per intrattenimento", "a"],
-        ["Sì, per informarmi", "a"],
-        ["Sì, per condividere contenuti", "a"],
-        ["No, non mi interessano", "a"]
+        ["Per intrattenimento", "a"],
+        ["Per informarmi", "a"],
+        ["Per condividere contenuti", "a"],
+        ["Non li utilizzo", "a"]
     ],
     [        
         "Quando bisogna organizzare qualcosa, come ti comporti?",
@@ -29,7 +29,7 @@ let obj_quiz=[
     ],
     [   
         "In quale di queste situazioni ti identifichi di più?",
-        ["Organizzo", "a"],
+        ["Organizzo sempre tutto", "a"],
         ["Lavoro, i risultati arriveranno", "a"],
         ["Raccolgo informazioni", "a"],
         ["Mi interesso agli altri", "a"]
