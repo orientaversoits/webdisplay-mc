@@ -114,13 +114,12 @@
 			else if(value <= 0 && elem.hasClass("redstone_on")){
 				elem.removeClass("redstone_on");
 				count_quiz++;
-				document.getElementById("content").innerHTML="";
-				generateTable(count_quiz);
+				if(count_quiz<11){
+					document.getElementById("content").innerHTML="";
+					generateTable(count_quiz);
+				}else window.open('https://www.its-ictpiemonte.it/corsi/fintech-software-developer/'); 
+				
 			}
-				
-				
-			
-			
 			document.getElementById("console").innerHTML=x+" "+y;
 		}
 		
