@@ -64,6 +64,10 @@
 			var classes = [];
 			var cw = ppp*6;
 			var ch = ppp;
+			if(x <= 0 || x >= screenW - 1)
+						cw -= border;
+			if(y <= 0 || y >= screenH - 1)
+						ch -= border;
 			classes.push("border_left");
 			var line = "<tr>";
 			line += "<td class=\"" + classes.join(" ") + "\" style=\"width: " + cw + "px; height: " + ch + "px;\">" + value + "</td>";
@@ -201,9 +205,9 @@
 </head>
 <body>
 	<table id="content" cellspacing="0" cellpadding="0">
-		<div id="console">
+		<!--<div id="console">
 
-		</div>
+		</div>-->
 	</table>
 	
 </body>
