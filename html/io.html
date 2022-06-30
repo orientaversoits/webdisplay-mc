@@ -64,9 +64,10 @@
 				var line = "<tr>";
 				for(x = 0; x < screenW/3; x++) {
 					var classes = [];
-					var cw = ppp*3;
-					var ch = ppp;
-					
+					if(y==0) var cw = ppp*6;
+					else var cw = ppp*3;
+					var ch = ppp;	
+
 					if(x > 0)
 						classes.push("border_left");
 						
@@ -84,7 +85,8 @@
 					
 						// identidico le 6 celle
 					xx=x
-
+					
+					
 					if(y==2 && x==0)
 						xx=1;
 					if(y==0 && x==1)
