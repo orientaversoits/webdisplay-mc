@@ -113,8 +113,9 @@
 				elem.addClass("redstone_on");
 			else if(value <= 0 && elem.hasClass("redstone_on"))
 				elem.removeClass("redstone_on");
-		
+			
 			count_quiz++;
+			document.getElementById("content").innerHTML="";
 			generateTable(count_quiz);
 			document.getElementById("console").innerHTML=x+" "+y;
 		}
