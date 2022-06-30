@@ -60,9 +60,9 @@
 		
 			for(y = 0; y < screenH; y++) {
 				var line = "<tr>";
-				for(x = 0; x < screenW; x++) {
+				for(x = 0; x < screenW/3; x++) {
 					var classes = [];
-					var cw = ppp;
+					var cw = ppp*3;
 					var ch = ppp;
 					var value = screenData[(screenH - y - 1) * screenW + x];
 					
