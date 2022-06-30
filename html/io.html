@@ -62,11 +62,16 @@
 		
 			/*title*/
 			var classes = [];
+			var cw = ppp*6;
+			var ch = ppp;
 			classes.push("border_left");
 			var line = "<tr>";
-			line += "<td id=\"cell_" + xx + "_" + y + "\" class=\"" + classes.join(" ") + "\" style=\"width: " + cw + "px; height: " + ch + "px;\" onclick=\"wdToggle(" + xx + ", " + y + ")\">" + value + "</td>";
+			line += "<td class=\"" + classes.join(" ") + "\" style=\"width: " + cw + "px; height: " + ch + "px;\">" + value + "</td>";
 			line += "</tr>";
-			$("#content").append(line);	
+			$("#content").append(line);
+			/*end*/	
+
+
 			/*
 			for(y = 0; y < screenH; y++) {
 				var line = "<tr>";
