@@ -79,6 +79,7 @@
 
 
 			/* start domande */
+			count_risposta=1;
 			for(y = 1; y < screenH; y++) {
 				var line = "<tr>";
 				for(x = 0; x < screenW/3; x++) {
@@ -117,7 +118,8 @@
 						xx=4;
 
 					
-					line += "<td id=\"cell_" + xx + "_" + yy + "\" class=\"" + classes.join(" ") + "\" style=\"width: " + cw + "px; height: " + ch + "px;\" onclick=\"wdToggle(" + xx + ", " + yy + ")\">" + value + "</td>";
+					line += "<td id=\"cell_" + xx + "_" + yy + "\" class=\"" + classes.join(" ") + "\" style=\"width: " + cw + "px; height: " + ch + "px;\" onclick=\"wdToggle(" + xx + ", " + yy + ")\">" + obj_quiz[count_quiz][count_risposta][0] + "</td>";
+					count_risposta++;
 				}					
 				line += "</tr>";
 				$("#content").append(line);
