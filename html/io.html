@@ -97,8 +97,10 @@
 					
 						// identidico le 6 celle
 					xx=x
+					yy=y
 					
-					
+					if(y==0 && x==0)
+						yy=1
 					if(y==2 && x==0)
 						xx=1;
 					if(y==0 && x==1)
@@ -109,7 +111,7 @@
 						xx=4;
 
 					
-					line += "<td id=\"cell_" + xx + "_" + y + "\" class=\"" + classes.join(" ") + "\" style=\"width: " + cw + "px; height: " + ch + "px;\" onclick=\"wdToggle(" + xx + ", " + y + ")\">" + value + "</td>";
+					line += "<td id=\"cell_" + xx + "_" + yy + "\" class=\"" + classes.join(" ") + "\" style=\"width: " + cw + "px; height: " + ch + "px;\" onclick=\"wdToggle(" + xx + ", " + yy + ")\">" + value + "</td>";
 				}					
 				line += "</tr>";
 				$("#content").append(line);
