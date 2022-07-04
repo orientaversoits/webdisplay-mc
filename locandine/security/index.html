@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FrontEnd</title>
+    <style>
+        img {
+            max-width: 100%;
+             /* Full height */
+            height: 100%;
+          }
+          body {
+            overflow: hidden; /* Hide scrollbars */
+          }
+    </style>
+</head>
+<body>
+    <img src="" id="image" >
+    <script>
+        let image = document.getElementById('image');
+        let images=["file-1.png", "file-2.png"];
+        let flag = 0;
+        setInterval(function(){
+            image.src = images[flag];
+            if(flag==0) flag++;
+            else flag--;
+        },10000);
+    </script>
+</body>
+</html>
